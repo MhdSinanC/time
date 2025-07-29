@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <h1>00:00:00</h1>
+    </div>
+
+
+
+    <script>
+        const h1 = document.querySelector('h1');
+
+        setInterval(() => {
+            let time = new Date().toLocaleString("en-US", { hour: '2-digit', minute: '2-digit', second: '2-digit'});
+            h1.textContent = time;
+        }, 1000)
+
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- <body>
+    <h1>0</h1>
+    <div>
+        <button class="incBtn">Increase</button>
+        <button class="decBtn">Decrease</button>
+        <button class="resetBtn">Reset</button>
+    </div>
+
+
+
+
+
+    <script>
+        let count = 0;
+        const h1 = document.querySelector('h1');
+        const incBtn = document.querySelector('.incBtn');
+        const decBtn = document.querySelector('.decBtn');
+        const resetBtn = document.querySelector('.resetBtn');
+
+        incBtn.addEventListener('click', () => {
+            count++;
+            h1.textContent = count;
+        })
+
+        decBtn.addEventListener('click', () => {
+            if (count !== 0) {
+                count--;
+                h1.textContent = count;
+            }
+
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            h1.textContent = count;
+        })
+
+        })
+    </script>
+</body> -->
